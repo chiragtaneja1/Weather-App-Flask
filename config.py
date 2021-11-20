@@ -1,1 +1,1 @@
-API_KEY = "Put you api key here."
+API_KEY = "Put your api key here."
