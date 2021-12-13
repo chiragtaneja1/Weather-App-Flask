@@ -23,10 +23,11 @@ def get_index():
         
         data = {
             "temp" : round(result["main"]["temp"] - 273.15),
+            "lon" : result["coord"]["lon"],
+            "lat" : result["coord"]["lat"],
             "humidity" : result["main"]["humidity"],
             "wind_speed" : result["wind"]["speed"],
-            "country_name" : result["sys"]["country"]
-        
+            "country_name" : result["sys"]["country"]    
         }
 
         return render_template("result.html", data=data, city_name=city_name)
